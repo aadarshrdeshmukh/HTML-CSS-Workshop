@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1f3a64;
+    color: white;
+    padding: 20px 40px;
+    animation: slideDown 1s ease forwards;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #20b2aa;
+}
+
+.intro-section {
+    background: linear-gradient(to right, #6a5acd, #48c9b0);
+    text-align: center;
+    color: white;
+    padding: 100px 20px;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.animated-text {
+    font-size: 42px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.intro-section p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.cta-button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: white;
+    color: #48c9b0;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background-color: #20b2aa;
+}
+
+.services {
+    padding: 60px 40px;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2e4053;
+}
+
+.service-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, background-color 0.4s, box-shadow 0.4s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.08) rotate(-1deg);
+    background-color: #b2dfdb;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2e4053;
+}
+
+.card p {
+    font-size: 15px;
+    color: #444;
+}
+
+.why-choose-us {
+    padding: 60px 40px;
+    background-color: #f7f7f7;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.why-choose-us h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2e4053;
+}
+
+.reasons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.reason-card {
+    background: white;
+    width: 260px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, background-color 0.4s, box-shadow 0.4s ease;
+    text-align: center;
+}
+
+.reason-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #1f3a64;
+}
+
+.reason-card p {
+    font-size: 15px;
+    color: #444;
+}
+
+.reason-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #e0f2f1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: #1f3a64;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    border-top: 5px solid #20b2aa;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+footer a {
+    color: #20b2aa;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00bcd4;
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-flex,
+    .reasons-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card,
+    .reason-card {
+        width: 90%;
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

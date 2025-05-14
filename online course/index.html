@@ -1,11 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Course Registration</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Let's Upgrade</h1>
+        <p>Vision Towards Better Future!</p>
+    </header>
+    <nav>
+        <a href="#Register">Register Now!</a>
+        <a href="#Home">Home</a>
+    </nav>
+    <form>
+
+        <fieldset id="Register">
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:<br>
+                <input type="text" id="fullname" placeholder="Enter your full name" required>
+            </label><br><br>
+
+            <label for="email">Email Address:<br>
+                <input type="email" id="email" placeholder="you@example.com" required>
+            </label><br><br>
+
+            <label for="phone">Phone Number:<br>
+                <input type="tel" id="phone" placeholder="10-digit phone number" maxlength="10" required>
+            </label><br><br>
+
+            <label>Gender:<br>
+                <div class="radio-group">
+                    <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+                    <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+                </div>
+            </label><br><br>
+
+            <label for="dob">Date of Birth:<br>
+                <input type="date" id="dob" required>
+            </label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Course Selection</legend>
+            <label for="course">Select Course:<br>
+                <select id="course" required>
+                    <option value="">Select a course</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                </select>
+            </label><br><br>
+
+            <label for="start-date">Preferred Start Date:<br>
+                <input type="date" id="start-date" required>
+            </label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Upload Documents</legend>
+            <label for="resume">Upload Your Resume (PDF/DOCX):<br>
+                <input type="file" id="resume" accept=".pdf,.doc,.docx">
+            </label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="comments">Comments:<br>
+                <textarea id="comments" placeholder="Any comments or questions" rows="4" cols="50"></textarea>
+            </label>
+        </fieldset><br>
+
+        <h3>Course Overview</h3>
+        <video width="320" height="240" controls>
+            <source src="course-overview.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video><br><br>
+
+        <h3>Course Introduction</h3>
+        <audio controls>
+            <source src="course-intro.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio><br><br>
+
+        <div class="button-group">
+            <button type="submit" onclick="show()">Submit Registration</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+    <footer>
+        <p>©️ 2025 Online Courses, All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function show() {
+            const name = document.getElementById("fullname").value;
+            alert("Thank you for registering, " + name + "!");
+        }
+    </script>
 </body>
+
 </html>
